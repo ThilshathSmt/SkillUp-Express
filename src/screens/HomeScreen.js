@@ -35,8 +35,8 @@ const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.greeting}>Hello, {user?.name || 'Student'}!</Text>
-        <Text style={styles.subtitle}>Find your next skill to master.</Text>
+        <Text style={styles.greeting}>UoM Course Finder</Text>
+        <Text style={styles.subtitle}>Browse and save your favourite resources.</Text>
       </View>
 
       <FlatList

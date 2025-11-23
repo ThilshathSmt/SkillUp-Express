@@ -6,7 +6,11 @@ import colors from '../constants/colors';
 const CourseCard = ({ course, onPress, isFavourite, onToggleFav }) => {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.9}>
-      <Image source={{ uri: course.image }} style={styles.image} />
+      <Image 
+        source={{ uri: course.image }} 
+        style={styles.image} 
+        defaultSource={{ uri: 'https://via.placeholder.com/300x400.png?text=Loading' }}
+      />
       
       <TouchableOpacity style={styles.favButton} onPress={onToggleFav}>
         <Ionicons 
@@ -44,8 +48,9 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 150,
-    resizeMode: 'cover',
+    height: 200,
+    resizeMode: 'contain',
+    backgroundColor: colors.lightGray,
   },
   favButton: {
     position: 'absolute',

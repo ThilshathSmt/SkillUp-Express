@@ -28,8 +28,8 @@ const RegisterScreen = ({ navigation }) => {
     >
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.header}>
-          <Text style={styles.title}>Create Account</Text>
-          <Text style={styles.subtitle}>Join SkillUp Express today!</Text>
+          <Text style={styles.title}>Join SkillUp</Text>
+          <Text style={styles.subtitle}>Create your student account</Text>
         </View>
 
         <View style={styles.form}>

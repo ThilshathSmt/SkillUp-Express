@@ -27,8 +27,8 @@ const LoginScreen = ({ navigation }) => {
     >
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.header}>
-          <Text style={styles.title}>Welcome Back!</Text>
-          <Text style={styles.subtitle}>Sign in to continue learning</Text>
+          <Text style={styles.title}>SkillUp</Text>
+          <Text style={styles.subtitle}>Sign in to access campus resources</Text>
         </View>
 
         <View style={styles.form}>

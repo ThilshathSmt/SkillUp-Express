@@ -25,7 +25,7 @@ const CourseDetailsScreen = ({ route, navigation }) => {
         
         <View style={styles.content}>
           <View style={styles.headerRow}>
-            <Text style={styles.category}>{course.category.toUpperCase()}</Text>
+            <Text style={styles.category}>{course.authors}</Text>
             <View style={styles.ratingContainer}>
               <Ionicons name="star" size={16} color={colors.secondary} />
               <Text style={styles.rating}>{course.rating}</Text>
@@ -35,7 +35,7 @@ const CourseDetailsScreen = ({ route, navigation }) => {
           <Text style={styles.title}>{course.title}</Text>
           <Text style={styles.price}>${course.price}</Text>
 
-          <Text style={styles.sectionTitle}>About this course</Text>
+          <Text style={styles.sectionTitle}>About this Resource</Text>
           <Text style={styles.description}>{course.description}</Text>
         </View>
       </ScrollView>
@@ -62,8 +62,9 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 250,
-    resizeMode: 'cover',
+    height: 300,
+    resizeMode: 'contain',
+    backgroundColor: colors.background,
   },
   content: {
     padding: 24,
@@ -75,10 +76,10 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   category: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: colors.primary,
-    letterSpacing: 1,
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.gray,
+    flex: 1,
   },
   ratingContainer: {
     flexDirection: 'row',
