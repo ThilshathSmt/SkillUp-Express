@@ -29,7 +29,7 @@
     - Scan QR code for Android/iOS (requires Expo Go).
 
 ## 4. Features
-- **Authentication**: Dummy Login/Register (accepts any non-empty input).
+
 - **Home**: 
     - Header with User Name & Profile Icon.
     - Search Bar (Search books/authors).
