@@ -7,11 +7,13 @@
 
 ## 2. API Integration
 - **Source**: [Open Library API](https://openlibrary.org/developers/api)
-- **Endpoint Used**: `https://openlibrary.org/subjects/programming.json?limit=20`
+- **Endpoints**:
+    - **Browse**: `https://openlibrary.org/subjects/programming.json?limit=20`
+    - **Search**: `https://openlibrary.org/search.json?q={query}&limit=20`
 - **Data Mapping**:
     - `title` -> Course/Book Title
     - `authors` -> Author Name
-    - `cover_id` -> Used to fetch image from `covers.openlibrary.org`
+    - `cover_id` / `cover_i` -> Used to fetch image from `covers.openlibrary.org`
     - `key` -> Unique ID
 
 ## 3. Setup Instructions
@@ -28,14 +30,22 @@
 
 ## 4. Features
 - **Authentication**: Dummy Login/Register (accepts any non-empty input).
-- **Home**: Lists programming resources/textbooks.
+- **Home**: 
+    - Header with User Name & Profile Icon.
+    - Search Bar (Search books/authors).
+    - Lists programming resources/textbooks.
 - **Details**: Shows book cover, title, author, and description.
 - **Favourites**: Save items to a local list (persisted via AsyncStorage).
 
 ## 5. Demo Script (Video)
 1.  **Login**: Enter "Student" / "password" -> Click Login.
-2.  **Home**: Scroll through the list of books (fetched from Open Library).
-3.  **Details**: Click on a book (e.g., "The C Programming Language"). Show the cover and author.
-4.  **Favourite**: Click the Heart icon. Go back.
-5.  **Tabs**: Switch to "Favourites" tab. Show the saved book.
-6.  **Persistence**: Reload the app (shake -> reload). Show the favourite is still there.
+2.  **Home**: 
+    - Show "Hello, Student" in header.
+    - Scroll through the default list.
+3.  **Search**: 
+    - Type "Harry Potter" or "Java" in the search bar.
+    - Press Enter/Search. Show results updating.
+4.  **Details**: Click on a book. Show the cover and author.
+5.  **Favourite**: Click the Heart icon. Go back.
+6.  **Tabs**: Switch to "Favourites" tab. Show the saved book.
+7.  **Persistence**: Reload the app (shake -> reload). Show the favourite is still there.
